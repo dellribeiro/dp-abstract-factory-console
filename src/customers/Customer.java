@@ -1,9 +1,14 @@
+package customers;
+
+import utils.RequestGrade;
+
+
 public class Customer {
 
-    private final String gradeRequest;
+    private final RequestGrade gradeRequest;
     private final boolean hasCompanyContract;
 
-    public Customer(String gradeRequest, boolean hasCompanyContract) {
+    public Customer(RequestGrade gradeRequest, boolean hasCompanyContract) {
         this.gradeRequest = gradeRequest;
         this.hasCompanyContract = hasCompanyContract;
     }
@@ -12,7 +17,7 @@ public class Customer {
         return hasCompanyContract;
     }
 
-    public String getGradeRequest() {
+    public RequestGrade getGradeRequest() {
         return gradeRequest;
     }
 }

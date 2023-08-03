@@ -1,10 +1,15 @@
+package consoles;
+
+
 public abstract class Console {
+    private String model;
     private String cpu;
     private String memory;
     private int resolution;
     private int storage;
 
-    public Console(String cpu, String memory, int resolution, int storage) {
+    public Console(String model, String cpu, String memory, int resolution, int storage) {
+        this.model = model;
         this.cpu = cpu;
         this.memory = memory;
         this.resolution = resolution;
@@ -29,5 +34,15 @@ public abstract class Console {
 
     public void checkStorageSpace() {
         System.out.println(storage + " of space is available.");
+    }
+
+    public void dataSheet() {
+        System.out.println("Console" +
+                "\nModel: " + model +
+                "\nCPU: " + cpu +
+                "\nMemory: " + memory +
+                "\nResolution: " + resolution + "p" +
+                "\nStorage: " + storage +
+                "\n");
     }
 }
